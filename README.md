@@ -1,47 +1,25 @@
+# 安装
+安装hexo-cli
+```shell
+$ npm install -g hexo-cli
+```
+初始化blog项目
+```shell
+$ hexo init <folder>
+$ cd <folder>
+$ npm install
+```
+生成静态文件
+```shell
+$ hexo generate # -d 文件生成后立即部署网站 -w 监视文件变动
+```
+启动服务器。默认情况下，访问网址为： http://localhost:4000/
+```shell
+$ hexo server
+```
+详细文档请戳[这里](https://hexo.io/zh-cn/docs/)
+
 # blog
 早就想写个人博客了,只怪自己懒😭,以此勉励自己⛽️
 
-### js
-```javascript
-var aasdads = function(){
-    window.alert(123);
-}
-var stopSearchAnim = function(callback){
-    setTimeout(function(){
-        isSearchAnim = false;
-        callback && callback();
-    }, searchAnimDuration);
-};
-
-$('#nav-search-btn').on('click', function(){
-    if (isSearchAnim) return;
-
-    startSearchAnim();
-    $searchWrap.addClass('on');
-    stopSearchAnim(function(){
-        $('.search-form-input').focus();
-    });
-});
-```
-### html
-```html
-<div class="asdad">asdasd</div>
-```
-```shell
-$ npm install
-```
-`npm install`
-
-* asdasd
-* sddff
-
---------
-
-# ff
-
-> This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
-> consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
-> Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
-> 
-> Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
-> id sem consectetuer libero luctus adipiscing.
+[博客入口](https://lh2907883.github.io/blog/)
