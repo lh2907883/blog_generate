@@ -5,9 +5,9 @@
 # Site
 title: dcs的博客
 subtitle: 
-description:
+description: 尽量不瞎写
 author: lihao
-language: zh-cn
+language: zh-Hans
 timezone:
 
 # URL
@@ -63,7 +63,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
