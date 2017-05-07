@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang=zh>
 <head>
-  <meta charset="utf-8">
-  
-  <title>关于XMLHttpRequest | dcs的博客</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="XMLHttpRequest是什么XMLHttpRequest 是一个API, 它为客户端提供了在客户端和服务器之间传输数据的功能。它提供了一个通过 URL 来获取数据的简单方式，并且不会使整个页面刷新。这使得网页只更新一部分页面而不会打扰到用户。XMLHttpRequest 在 AJAX 中被大量使用。 兼容性  IE8/IE9也完全不支持xhr对象, 不过可以使用ActiveXObject类生">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="XMLHttpRequest是什么XMLHttpRequest 是一个API, 它为客户端提供了在客户端和服务器之间传输数据的功能。它提供了一个通过 URL 来获取数据的简单方式，并且不会使整个页面刷新。这使得网页只更新一部分页面而不会打扰到用户。XMLHttpRequest 在 AJAX 中被大量使用。 兼容性  IE8/IE9也完全不支持xhr对象, 不过可以使用ActiveXObject类生">
 <meta name="keywords" content="javascript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于XMLHttpRequest">
@@ -13,80 +14,159 @@
 <meta property="og:site_name" content="dcs的博客">
 <meta property="og:description" content="XMLHttpRequest是什么XMLHttpRequest 是一个API, 它为客户端提供了在客户端和服务器之间传输数据的功能。它提供了一个通过 URL 来获取数据的简单方式，并且不会使整个页面刷新。这使得网页只更新一部分页面而不会打扰到用户。XMLHttpRequest 在 AJAX 中被大量使用。 兼容性  IE8/IE9也完全不支持xhr对象, 不过可以使用ActiveXObject类生">
 <meta property="og:image" content="https://lh2907883.github.io/store/blog/%E5%85%B3%E4%BA%8EXMLHttpRequest/1.png">
-<meta property="og:updated_time" content="2017-05-07T14:40:30.000Z">
+<meta property="og:updated_time" content="2017-05-07T15:34:46.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于XMLHttpRequest">
 <meta name="twitter:description" content="XMLHttpRequest是什么XMLHttpRequest 是一个API, 它为客户端提供了在客户端和服务器之间传输数据的功能。它提供了一个通过 URL 来获取数据的简单方式，并且不会使整个页面刷新。这使得网页只更新一部分页面而不会打扰到用户。XMLHttpRequest 在 AJAX 中被大量使用。 兼容性  IE8/IE9也完全不支持xhr对象, 不过可以使用ActiveXObject类生">
 <meta name="twitter:image" content="https://lh2907883.github.io/store/blog/%E5%85%B3%E4%BA%8EXMLHttpRequest/1.png">
-  
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/blog/css/style.css">
-  
-
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/blog/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/blog/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>关于XMLHttpRequest</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/blog/lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/blog/lib/meslo-LG/styles.css">
+    <link rel="stylesheet" href="/blog/lib/justified-gallery/justifiedGallery.min.css">
+    <link rel="stylesheet" href="/blog/css/style.css">
+    <!-- rss -->
+    
+    
+    <!-- jquery -->
+    <script src="/blog/lib/jquery/jquery.min.js"></script>
 </head>
 
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/blog/" id="logo">dcs的博客</a>
-      </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/blog/" id="subtitle">尽量不瞎写</a>
-        </h2>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/blog/">主页</a>
-        
-          <a class="main-nav-link" href="/blog/archives">归档</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://lh2907883.github.io/blog"></form>
-      </div>
+    <div class="banner">
+<div id="blogtitel" class="blogtitel">dcs的博客</div>
+<ul id="wrapper" class="wrapper">
+  <div class="sun">
+    <div class="star"></div>
+  </div>
+  <div class="mercury">
+    <div class="planet">
+      <div class="shadow"></div>
     </div>
   </div>
-</header>
-      <div class="outer">
-        <section id="main"><article id="post-关于XMLHttpRequest" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/2017/05/07/关于XMLHttpRequest/" class="article-date">
-  <time datetime="2017-05-07T04:37:45.000Z" itemprop="datePublished">2017-05-07</time>
-</a>
-    
+  <div class="venus">
+    <div class="planet">
+      <div class="shadow"></div>
+    </div>
   </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+  <div class="earth">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+  <div class="mars">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+  <div class="jupiter">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+</ul>
+</div>
+
+    <div class="background">
+      
+        <div id="header-post">
+    <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+    <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+    <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+    <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/blog/">主页</a></li>
+         
+          <li><a href="/blog/archives/">归档</a></li>
         
-  
-    <h1 class="article-title" itemprop="name">
-      关于XMLHttpRequest
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/blog/2017/05/06/hello-world/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
+        <!--<li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>-->
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+    <span id="i-next" class="info" style="display:none;">Next post</span>
+    <span id="i-top" class="info" style="display:none;">Back to top</span>
+    <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+        <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://lh2907883.github.io/blog/2017/05/07/关于XMLHttpRequest/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://lh2907883.github.io/blog/2017/05/07/关于XMLHttpRequest/&text=关于XMLHttpRequest"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://lh2907883.github.io/blog/2017/05/07/关于XMLHttpRequest/&title=关于XMLHttpRequest"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://lh2907883.github.io/blog/2017/05/07/关于XMLHttpRequest/&is_video=false&description=关于XMLHttpRequest"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=关于XMLHttpRequest&body=Check out this article: http://lh2907883.github.io/blog/2017/05/07/关于XMLHttpRequest/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://lh2907883.github.io/blog/2017/05/07/关于XMLHttpRequest/&title=关于XMLHttpRequest"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://lh2907883.github.io/blog/2017/05/07/关于XMLHttpRequest/&title=关于XMLHttpRequest"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://lh2907883.github.io/blog/2017/05/07/关于XMLHttpRequest/&title=关于XMLHttpRequest"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://lh2907883.github.io/blog/2017/05/07/关于XMLHttpRequest/&title=关于XMLHttpRequest"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://lh2907883.github.io/blog/2017/05/07/关于XMLHttpRequest/&name=关于XMLHttpRequest&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#XMLHttpRequest是什么"><span class="toc-number">1.</span> <span class="toc-text">XMLHttpRequest是什么</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#兼容性"><span class="toc-number">2.</span> <span class="toc-text">兼容性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何使用"><span class="toc-number">3.</span> <span class="toc-text">如何使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-实例化XMLHttpRequest对象"><span class="toc-number">3.1.</span> <span class="toc-text">1.实例化XMLHttpRequest对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-初始化一个请求"><span class="toc-number">3.2.</span> <span class="toc-text">2.初始化一个请求</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-设置xhr参数"><span class="toc-number">3.3.</span> <span class="toc-text">3.设置xhr参数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-设置request-header"><span class="toc-number">3.3.1.</span> <span class="toc-text">3.1 设置request header</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-设置response-type"><span class="toc-number">3.3.2.</span> <span class="toc-text">3.2 设置response type</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3-设置请求超时"><span class="toc-number">3.3.3.</span> <span class="toc-text">3.3 设置请求超时</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-4-设置xhr状态变化时的回调"><span class="toc-number">3.3.4.</span> <span class="toc-text">3.4 设置xhr状态变化时的回调</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-5-xhr的事件"><span class="toc-number">3.3.5.</span> <span class="toc-text">3.5 xhr的事件</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-发送数据"><span class="toc-number">3.4.</span> <span class="toc-text">4.发送数据</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考资料"><span class="toc-number">4.</span> <span class="toc-text">参考资料</span></a></li></ol>
+    </div>
+    </span>
+</div>
+      
+      <div class="content index width mx-auto px2 my4">
+          
+          <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        关于XMLHttpRequest
     </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">dcs的博客</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2017-05-07T04:37:45.000Z" itemprop="datePublished">2017-05-07</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/blog/tags/javascript/">javascript</a>
+    </div>
+
+
+    </div>
+  </header>
   
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="XMLHttpRequest是什么"><a href="#XMLHttpRequest是什么" class="headerlink" title="XMLHttpRequest是什么"></a>XMLHttpRequest是什么</h2><p>XMLHttpRequest 是一个<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/XMLHttpRequest" target="_blank" rel="external">API</a>, 它为客户端提供了在客户端和服务器之间传输数据的功能。它提供了一个通过 URL 来获取数据的简单方式，并且不会使整个页面刷新。这使得网页只更新一部分页面而不会打扰到用户。XMLHttpRequest 在 <a href="https://developer.mozilla.org/zh-CN/docs/AJAX" target="_blank" rel="external">AJAX</a> 中被大量使用。</p>
+  <div class="content" itemprop="articleBody">
+    <h2 id="XMLHttpRequest是什么"><a href="#XMLHttpRequest是什么" class="headerlink" title="XMLHttpRequest是什么"></a>XMLHttpRequest是什么</h2><p>XMLHttpRequest 是一个<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/XMLHttpRequest" target="_blank" rel="external">API</a>, 它为客户端提供了在客户端和服务器之间传输数据的功能。它提供了一个通过 URL 来获取数据的简单方式，并且不会使整个页面刷新。这使得网页只更新一部分页面而不会打扰到用户。XMLHttpRequest 在 <a href="https://developer.mozilla.org/zh-CN/docs/AJAX" target="_blank" rel="external">AJAX</a> 中被大量使用。</p>
 <h2 id="兼容性"><a href="#兼容性" class="headerlink" title="兼容性"></a>兼容性</h2><p><img src="https://lh2907883.github.io/store/blog/%E5%85%B3%E4%BA%8EXMLHttpRequest/1.png" alt=""></p>
 <ul>
 <li><p>IE8/IE9也完全不支持xhr对象, 不过可以使用<a href="https://msdn.microsoft.com/zh-cn/library/7sw4ddf8%28v=vs.94%29.aspx" target="_blank" rel="external">ActiveXObject</a>类生成xhr实例</p>
@@ -219,117 +299,90 @@
 <li><a href="https://www.html5rocks.com/zh/tutorials/file/xhr2/" target="_blank" rel="external">XMLHttpRequest2 新技巧</a></li>
 </ul>
 
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://lh2907883.github.io/blog/2017/05/07/关于XMLHttpRequest/" data-id="cj2egb8et0000jgtxnhapkelx" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/javascript/">javascript</a></li></ul>
-
-    </footer>
   </div>
-  
-    
-<nav id="article-nav">
-  
-  
-    <a href="/blog/2017/05/06/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
-    </a>
-  
-</nav>
-
-  
 </article>
 
-</section>
-        
-          <aside id="sidebar">
-  
-    
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/javascript/">javascript</a></li></ul>
+
+      </div>
+      
+       <div id="footer-post-container">
+    <div id="footer-post">
+
+        <div id="nav-footer" style="display: none">
+            <ul>
+                
+                    <li>
+                        <a href="/blog/">
+                            主页
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/blog/archives/">
+                            归档
+                        </a>
+                    </li>
+                    
+            </ul>
+        </div>
+
+        <div id="toc-footer" style="display: none">
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#XMLHttpRequest是什么"><span class="toc-number">1.</span> <span class="toc-text">XMLHttpRequest是什么</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#兼容性"><span class="toc-number">2.</span> <span class="toc-text">兼容性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何使用"><span class="toc-number">3.</span> <span class="toc-text">如何使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-实例化XMLHttpRequest对象"><span class="toc-number">3.1.</span> <span class="toc-text">1.实例化XMLHttpRequest对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-初始化一个请求"><span class="toc-number">3.2.</span> <span class="toc-text">2.初始化一个请求</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-设置xhr参数"><span class="toc-number">3.3.</span> <span class="toc-text">3.设置xhr参数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-设置request-header"><span class="toc-number">3.3.1.</span> <span class="toc-text">3.1 设置request header</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-设置response-type"><span class="toc-number">3.3.2.</span> <span class="toc-text">3.2 设置response type</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3-设置请求超时"><span class="toc-number">3.3.3.</span> <span class="toc-text">3.3 设置请求超时</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-4-设置xhr状态变化时的回调"><span class="toc-number">3.3.4.</span> <span class="toc-text">3.4 设置xhr状态变化时的回调</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-5-xhr的事件"><span class="toc-number">3.3.5.</span> <span class="toc-text">3.5 xhr的事件</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-发送数据"><span class="toc-number">3.4.</span> <span class="toc-text">4.发送数据</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考资料"><span class="toc-number">4.</span> <span class="toc-text">参考资料</span></a></li></ol>
+        </div>
+
+        <div id="share-footer" style="display: none">
+            <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://lh2907883.github.io/blog/2017/05/07/关于XMLHttpRequest/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://lh2907883.github.io/blog/2017/05/07/关于XMLHttpRequest/&text=关于XMLHttpRequest"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://lh2907883.github.io/blog/2017/05/07/关于XMLHttpRequest/&title=关于XMLHttpRequest"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://lh2907883.github.io/blog/2017/05/07/关于XMLHttpRequest/&is_video=false&description=关于XMLHttpRequest"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=关于XMLHttpRequest&body=Check out this article: http://lh2907883.github.io/blog/2017/05/07/关于XMLHttpRequest/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://lh2907883.github.io/blog/2017/05/07/关于XMLHttpRequest/&title=关于XMLHttpRequest"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://lh2907883.github.io/blog/2017/05/07/关于XMLHttpRequest/&title=关于XMLHttpRequest"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://lh2907883.github.io/blog/2017/05/07/关于XMLHttpRequest/&title=关于XMLHttpRequest"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://lh2907883.github.io/blog/2017/05/07/关于XMLHttpRequest/&title=关于XMLHttpRequest"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://lh2907883.github.io/blog/2017/05/07/关于XMLHttpRequest/&name=关于XMLHttpRequest&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+        </div>
+
+        <div id="actions-footer">
+            <ul>
+                <li id="toc"><a class="icon" href="#" onclick='$("#toc-footer").toggle();return false;'><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+                <!--<li id="share"><a class="icon" href="#" onclick='$("#share-footer").toggle();return false;'><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>-->
+                <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+                <li id="menu"><a class="icon" href="#" onclick='$("#nav-footer").toggle();return false;'><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+            </ul>
+        </div>
+
     </div>
+</div>
+      
+      <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2017 lihao
   </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/blog/tags/javascript/" style="font-size: 10px;">javascript</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/05/">May 2017</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
+  <div class="footer-right">
+    <nav>
       <ul>
-        
-          <li>
-            <a href="/blog/2017/05/07/关于XMLHttpRequest/">关于XMLHttpRequest</a>
-          </li>
-        
-          <li>
-            <a href="/blog/2017/05/06/hello-world/">Hello World</a>
-          </li>
+         
+          <li><a href="/blog/">主页</a></li>
+         
+          <li><a href="/blog/archives/">归档</a></li>
         
       </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2017 lihao<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
+    </nav>
   </div>
 </footer>
+
+      <script src="/blog/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/blog/js/main.js"></script>
+<!-- Google Analytics -->
+
+<!-- Disqus Comments -->
+
+
     </div>
-    <nav id="mobile-nav">
-  
-    <a href="/blog/" class="mobile-nav-link">主页</a>
-  
-    <a href="/blog/archives" class="mobile-nav-link">归档</a>
-  
-</nav>
-    
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  <link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css">
-  <script src="/blog/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/blog/js/script.js"></script>
-
-  </div>
 </body>
 </html>
