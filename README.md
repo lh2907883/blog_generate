@@ -19,9 +19,6 @@ $ hexo server
 ```
 详细文档请戳[这里](https://hexo.io/zh-cn/docs/)
 
-# 主题
-[next](http://theme-next.iissnan.com/getting-started.html)
-
 # blog
 早就想写个人博客了,只怪自己懒😭,以此勉励自己⛽️
 
