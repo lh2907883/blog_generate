@@ -4,22 +4,28 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>dcs的博客</title>
+    <title>web离线应用 | dcs的博客</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="lihao">
     
 
     
-    <meta name="description" content="尽量不瞎写">
-<meta property="og:type" content="website">
-<meta property="og:title" content="dcs的博客">
-<meta property="og:url" content="http://lh2907883.github.io/blog/index.html">
+    <meta name="description" content="什么是web离线应用在正常情况下,客户端使用HTTP协议通过网络得到服务器的资源,然后展示,但是如果在网络断开的情况下,客户端就没办法了,这时就需要一种技术去解决这一问题,目前有两种方式:AppCache和Service Workers,他们都是通过在断网时读取本地缓存资源来实现web应用的离线访问的. 比较AppCache和Service Workers使用方式AppCache通过指定缓存清单文">
+<meta name="keywords" content="javascript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="web离线应用">
+<meta property="og:url" content="http://lh2907883.github.io/blog/2017/05/14/web离线应用/index.html">
 <meta property="og:site_name" content="dcs的博客">
-<meta property="og:description" content="尽量不瞎写">
+<meta property="og:description" content="什么是web离线应用在正常情况下,客户端使用HTTP协议通过网络得到服务器的资源,然后展示,但是如果在网络断开的情况下,客户端就没办法了,这时就需要一种技术去解决这一问题,目前有两种方式:AppCache和Service Workers,他们都是通过在断网时读取本地缓存资源来实现web应用的离线访问的. 比较AppCache和Service Workers使用方式AppCache通过指定缓存清单文">
+<meta property="og:image" content="https://lh2907883.github.io/store/blog/web%E7%A6%BB%E7%BA%BF%E5%BA%94%E7%94%A8/1.png">
+<meta property="og:image" content="https://lh2907883.github.io/store/blog/web%E7%A6%BB%E7%BA%BF%E5%BA%94%E7%94%A8/2.png">
+<meta property="og:image" content="https://lh2907883.github.io/store/blog/web%E7%A6%BB%E7%BA%BF%E5%BA%94%E7%94%A8/3.png">
+<meta property="og:updated_time" content="2017-05-14T09:02:29.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="dcs的博客">
-<meta name="twitter:description" content="尽量不瞎写">
+<meta name="twitter:title" content="web离线应用">
+<meta name="twitter:description" content="什么是web离线应用在正常情况下,客户端使用HTTP协议通过网络得到服务器的资源,然后展示,但是如果在网络断开的情况下,客户端就没办法了,这时就需要一种技术去解决这一问题,目前有两种方式:AppCache和Service Workers,他们都是通过在断网时读取本地缓存资源来实现web应用的离线访问的. 比较AppCache和Service Workers使用方式AppCache通过指定缓存清单文">
+<meta name="twitter:image" content="https://lh2907883.github.io/store/blog/web%E7%A6%BB%E7%BA%BF%E5%BA%94%E7%94%A8/1.png">
 
     
     <link rel="alternative" href="/atom.xml" title="dcs的博客" type="application/atom+xml">
@@ -73,12 +79,10 @@
 </div>
     </header>
     <div id="container">
-      <div id="main">
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
   <h1 itemprop="name">
     
       <a href="/blog/2017/05/14/web离线应用/" title="web离线应用" itemprop="url">web离线应用</a>
@@ -92,9 +96,16 @@
     
   </p>
 </header>
-    <div class="article-content">
-        
-        <h2 id="什么是web离线应用"><a href="#什么是web离线应用" class="headerlink" title="什么是web离线应用"></a>什么是web离线应用</h2><p>在正常情况下,客户端使用HTTP协议通过网络得到服务器的资源,然后展示,但是如果在网络断开的情况下,客户端就没办法了,这时就需要一种技术去解决这一问题,目前有两种方式:<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Using_the_application_cache" target="_blank" rel="external">AppCache</a>和<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers#Browser_compatibility" target="_blank" rel="external">Service Workers</a>,他们都是通过在断网时读取本地缓存资源来实现web应用的离线访问的.</p>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">Contents</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是web离线应用"><span class="toc-number">1.</span> <span class="toc-text">什么是web离线应用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#比较AppCache和Service-Workers"><span class="toc-number">2.</span> <span class="toc-text">比较AppCache和Service Workers</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#使用方式"><span class="toc-number">2.1.</span> <span class="toc-text">使用方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#兼容性"><span class="toc-number">2.2.</span> <span class="toc-text">兼容性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#W3C标准"><span class="toc-number">2.3.</span> <span class="toc-text">W3C标准</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用Service-Workers的前提条件"><span class="toc-number">3.</span> <span class="toc-text">使用Service Workers的前提条件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何使用"><span class="toc-number">4.</span> <span class="toc-text">如何使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#注册service-worker"><span class="toc-number">4.1.</span> <span class="toc-text">注册service worker</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#关于sw-js"><span class="toc-number">4.2.</span> <span class="toc-text">关于sw.js</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#sw-js的职责"><span class="toc-number">4.2.1.</span> <span class="toc-text">sw.js的职责</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#具体实现"><span class="toc-number">4.2.2.</span> <span class="toc-text">具体实现</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#改进后的代码"><span class="toc-number">4.2.3.</span> <span class="toc-text">改进后的代码</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考资料"><span class="toc-number">5.</span> <span class="toc-text">参考资料</span></a></li></ol>
+		
+		</div>
+		
+		<h2 id="什么是web离线应用"><a href="#什么是web离线应用" class="headerlink" title="什么是web离线应用"></a>什么是web离线应用</h2><p>在正常情况下,客户端使用HTTP协议通过网络得到服务器的资源,然后展示,但是如果在网络断开的情况下,客户端就没办法了,这时就需要一种技术去解决这一问题,目前有两种方式:<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Using_the_application_cache" target="_blank" rel="external">AppCache</a>和<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers#Browser_compatibility" target="_blank" rel="external">Service Workers</a>,他们都是通过在断网时读取本地缓存资源来实现web应用的离线访问的.</p>
 <h2 id="比较AppCache和Service-Workers"><a href="#比较AppCache和Service-Workers" class="headerlink" title="比较AppCache和Service Workers"></a>比较AppCache和Service Workers</h2><h3 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h3><p>AppCache通过指定缓存清单文件来设置哪些资源需要被缓存</p>
 <p>Service Workers则有更新强大的API来通过脚本精准控制缓存(包括更新,追加,删除缓存)</p>
 <h3 id="兼容性"><a href="#兼容性" class="headerlink" title="兼容性"></a>兼容性</h3><p>下图是各大浏览器对AppCache的支持情况,可以看出基本都支持<br><img src="https://lh2907883.github.io/store/blog/web%E7%A6%BB%E7%BA%BF%E5%BA%94%E7%94%A8/1.png" alt=""></p>
@@ -153,14 +164,9 @@
 <h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
 <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers" target="_blank" rel="external">MDN 使用 Service Workers</a></li>
 </ul>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
+  
+	</div>
+		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
 
@@ -173,268 +179,43 @@
 
 
 
-
-<div class="comments-count">
+	<div class="article-share" id="share">
 	
-</div>
+	  <div data-url="http://lh2907883.github.io/blog/2017/05/14/web离线应用/" data-title="web离线应用 | dcs的博客" data-tsina="undefined" class="share clearfix">
+	  </div>
+	
+	</div>
+
 
 </footer>
 
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/blog/2017/05/07/关于XMLHttpRequest/" title="关于XMLHttpRequest" itemprop="url">关于XMLHttpRequest</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/blog/about" title="lihao" target="_blank" itemprop="author">lihao</a>
-		
-  <p class="article-time">
-    <time datetime="2017-05-07T04:37:45.000Z" itemprop="datePublished"> Published 2017-05-07</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h2 id="XMLHttpRequest是什么"><a href="#XMLHttpRequest是什么" class="headerlink" title="XMLHttpRequest是什么"></a>XMLHttpRequest是什么</h2><p>XMLHttpRequest 是一个<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/XMLHttpRequest" target="_blank" rel="external">API</a>, 它为客户端提供了在客户端和服务器之间传输数据的功能。它提供了一个通过 URL 来获取数据的简单方式，并且不会使整个页面刷新。这使得网页只更新一部分页面而不会打扰到用户。XMLHttpRequest 在 <a href="https://developer.mozilla.org/zh-CN/docs/AJAX" target="_blank" rel="external">AJAX</a> 中被大量使用。</p>
-<h2 id="兼容性"><a href="#兼容性" class="headerlink" title="兼容性"></a>兼容性</h2><p><img src="https://lh2907883.github.io/store/blog/%E5%85%B3%E4%BA%8EXMLHttpRequest/1.png" alt=""></p>
-<ul>
-<li><p>IE8/IE9也完全不支持xhr对象, 不过可以使用<a href="https://msdn.microsoft.com/zh-cn/library/7sw4ddf8%28v=vs.94%29.aspx" target="_blank" rel="external">ActiveXObject</a>类生成xhr实例</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> <span class="built_in">window</span>.ActiveXObject( <span class="string">"Microsoft.XMLHTTP"</span> )</div></pre></td></tr></table></figure>
-</li>
-<li><p>IE10/IE11部分支持，不支持 xhr.responseType为json</p>
-</li>
-</ul>
-<h2 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h2><p>使用xhr给后台server发送请求,大概可以分下面几个步骤</p>
-<h3 id="1-实例化XMLHttpRequest对象"><a href="#1-实例化XMLHttpRequest对象" class="headerlink" title="1.实例化XMLHttpRequest对象"></a>1.实例化XMLHttpRequest对象</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest();</div></pre></td></tr></table></figure>
-<h3 id="2-初始化一个请求"><a href="#2-初始化一个请求" class="headerlink" title="2.初始化一个请求"></a>2.初始化一个请求</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xhr.open(<span class="string">'POST'</span>, <span class="string">'/server'</span>, <span class="literal">true</span>);</div></pre></td></tr></table></figure>
-<p><code>open(method, url [, async = true [, username = null [, password = null]]])</code></p>
-<p>async: 默认值为true，即为异步请求，若async=false，则为同步请求</p>
-<h3 id="3-设置xhr参数"><a href="#3-设置xhr参数" class="headerlink" title="3.设置xhr参数"></a>3.设置xhr参数</h3><h4 id="3-1-设置request-header"><a href="#3-1-设置request-header" class="headerlink" title="3.1 设置request header"></a>3.1 设置request header</h4><ol>
-<li>通过调用setRequestHeader方法,设置请求头,这一步必须在<code>xhr.open</code>之后调用</li>
-<li>setRequestHeader可以调用多次，最终的值不会采用覆盖override的方式，而是采用追加append的方式<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">xhr.setRequestHeader(<span class="string">'X-Test'</span>, <span class="string">'one'</span>);</div><div class="line">xhr.setRequestHeader(<span class="string">'X-Test'</span>, <span class="string">'two'</span>);</div><div class="line"><span class="comment">// 最终request header中"X-Test"为: one, two</span></div></pre></td></tr></table></figure>
-</li>
-</ol>
-<h4 id="3-2-设置response-type"><a href="#3-2-设置response-type" class="headerlink" title="3.2 设置response type"></a>3.2 设置response type</h4><ol>
-<li>可以设置<code>xhr.responseType</code>,下面是responseType支持的类型</li>
-</ol>
-<table>
-<thead>
-<tr>
-<th>值</th>
-<th>xhr.response 数据类型</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>“”</td>
-<td>String</td>
-<td>默认值(在不设置responseType时)</td>
-</tr>
-<tr>
-<td>“text”</td>
-<td>String</td>
-<td></td>
-</tr>
-<tr>
-<td>“document”</td>
-<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document" target="_blank" rel="external">Document</a> 对象</td>
-<td>希望返回 XML 格式数据时使用</td>
-</tr>
-<tr>
-<td>“json”</td>
-<td>javascript 对象</td>
-<td>存在兼容性问题，IE10/IE11不支持</td>
-</tr>
-<tr>
-<td>“blob”</td>
-<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Blob" target="_blank" rel="external">Blob</a>对象</td>
-<td></td>
-</tr>
-<tr>
-<td>“arrayBuffer”</td>
-<td><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/ArrayBuffer" target="_blank" rel="external">ArrayBuffer</a>对象</td>
-</tr>
-</tbody>
-</table>
-<p>客户端代码<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest();</div><div class="line">xhr.open(<span class="string">'GET'</span>, <span class="string">'/json'</span>);</div><div class="line">xhr.responseType = <span class="string">'json'</span>;</div><div class="line">xhr.onreadystatechange = <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (<span class="keyword">this</span>.readyState == <span class="number">4</span> &amp;&amp; <span class="keyword">this</span>.status == <span class="number">200</span>) &#123;</div><div class="line">        <span class="comment">//通过xhr.response可以拿到返回的json数据</span></div><div class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.response);</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line">xhr.send();</div></pre></td></tr></table></figure></p>
-<p>服务端代码<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (req.url == <span class="string">'/json'</span>) &#123;</div><div class="line">    res.writeHead(<span class="number">200</span>, &#123; <span class="string">'content-type'</span>: <span class="string">'application/json'</span> &#125;);</div><div class="line">    res.write(<span class="string">'&#123;"a": 123, "b": "dcs"&#125;'</span>);</div><div class="line">    res.end();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<ol>
-<li>通过调用<code>xhr.overrideMimeType</code>方法来重写response的content-type(不过这个方法我调用之后并没有起作用..)</li>
-</ol>
-<h4 id="3-3-设置请求超时"><a href="#3-3-设置请求超时" class="headerlink" title="3.3 设置请求超时"></a>3.3 设置请求超时</h4><p>可以设置<code>xhr.timeout</code>,来设置超时时间(单位毫秒),在xhr.send()方法调用后开始计时</p>
-<h4 id="3-4-设置xhr状态变化时的回调"><a href="#3-4-设置xhr状态变化时的回调" class="headerlink" title="3.4 设置xhr状态变化时的回调"></a>3.4 设置xhr状态变化时的回调</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">xhr.onreadystatechange = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">switch</span>(xhr.readyState)&#123;</div><div class="line">        <span class="keyword">case</span> <span class="number">0</span>:<span class="comment">//UNSENT,open()方法没有调用</span></div><div class="line">            <span class="keyword">break</span>;</div><div class="line">        <span class="keyword">case</span> <span class="number">1</span>:<span class="comment">//OPENED,open()方法已被成功调用,send()方法还未被调用。</span></div><div class="line">            <span class="keyword">break</span>;</div><div class="line">        <span class="keyword">case</span> <span class="number">2</span>:<span class="comment">//HEADERS_RECEIVED,send()方法已经被调用, 响应头和响应状态已经返回</span></div><div class="line">            <span class="keyword">break</span>;</div><div class="line">        <span class="keyword">case</span> <span class="number">3</span>:<span class="comment">//LOADING,响应体下载中,responseText中已经获取了部分数据.</span></div><div class="line">            <span class="keyword">break</span>;</div><div class="line">        <span class="keyword">case</span> <span class="number">4</span>:<span class="comment">//DONE,整个请求过程已经完毕.</span></div><div class="line">            <span class="keyword">break</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h4 id="3-5-xhr的事件"><a href="#3-5-xhr的事件" class="headerlink" title="3.5 xhr的事件"></a>3.5 xhr的事件</h4><table>
-<thead>
-<tr>
-<th>事件</th>
-<th>触发条件</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>onreadystatechange</td>
-<td>每当xhr.readyState改变时触发；但xhr.readyState由非0值变为0时不触发。</td>
-</tr>
-<tr>
-<td>onloadstart</td>
-<td>调用xhr.send()方法后立即触发，若xhr.send()未被调用则不会触发此事件。</td>
-</tr>
-<tr>
-<td>onprogress</td>
-<td>xhr.upload.onprogress在上传阶段(即xhr.send()之后，xhr.readystate=2之前)触发；xhr.onprogress在下载阶段（即xhr.readystate=3时）触发</td>
-</tr>
-<tr>
-<td>onload</td>
-<td>当请求成功完成时触发，此时xhr.readystate=4</td>
-</tr>
-<tr>
-<td>onloadend</td>
-<td>当请求结束（包括请求成功和请求失败）时触发</td>
-</tr>
-<tr>
-<td>onabort</td>
-<td>当调用xhr.abort()后触发</td>
-</tr>
-<tr>
-<td>ontimeout</td>
-<td>xhr.timeout不等于0，由请求开始即onloadstart开始算起，当到达xhr.timeout所设置时间请求还未结束即onloadend，则触发此事件。</td>
-</tr>
-<tr>
-<td>onerror</td>
-<td>在请求过程中，若发生Network error则会触发此事件（若发生Network error时，上传还没有结束，则会先触发xhr.upload.onerror，再触发xhr.onerror；若发生Network error时，上传已经结束，则只会触发xhr.onerror）。<strong>注意</strong>，只有发生了网络层级别的异常才会触发此事件，对于应用层级别的异常，如响应返回的xhr.statusCode是4xx时，并不属于Network error，所以不会触发onerror事件，而是会触发onload事件。</td>
-</tr>
-</tbody>
-</table>
-<h3 id="4-发送数据"><a href="#4-发送数据" class="headerlink" title="4.发送数据"></a>4.发送数据</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xhr.send(data);</div></pre></td></tr></table></figure>
-<ul>
-<li>对于GET/HEAD请求<code>send</code>方法通常不传参数</li>
-<li>对于POST/DELETE/PUT请求,<code>xhr.send(data)</code>的参数data可以是以下几种类型：<ul>
-<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/ArrayBuffer" target="_blank" rel="external">ArrayBuffer</a></li>
-<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Blob" target="_blank" rel="external">Blob</a></li>
-<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document" target="_blank" rel="external">Document</a></li>
-<li>DOMString</li>
-<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/FormData" target="_blank" rel="external">FormData</a></li>
-</ul>
-</li>
-</ul>
-<p>来一个🌰</p>
-<p>客户端代码<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> fileInputElement = <span class="built_in">document</span>.getElementById(<span class="string">'file'</span>)</div><div class="line"></div><div class="line"><span class="keyword">var</span> oMyForm = <span class="keyword">new</span> FormData();</div><div class="line"></div><div class="line">oMyForm.append(<span class="string">"username"</span>, <span class="string">"dcs"</span>);</div><div class="line">oMyForm.append(<span class="string">"num"</span>, <span class="number">123456</span>); <span class="comment">// 数字123456被立即转换成字符串"123456"</span></div><div class="line"></div><div class="line"><span class="comment">// fileInputElement中已经包含了用户所选择的文件</span></div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; fileInputElement.files.length; i++) &#123;</div><div class="line">    oMyForm.append(<span class="string">"file"</span>, fileInputElement.files[i]);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> oFileBody = <span class="string">'&lt;a id="a"&gt;&lt;b id="b"&gt;hey!&lt;/b&gt;&lt;/a&gt;'</span>; <span class="comment">// Blob对象包含的文件内容</span></div><div class="line"><span class="keyword">var</span> oBlob = <span class="keyword">new</span> Blob([oFileBody], &#123;</div><div class="line">    <span class="attr">type</span>: <span class="string">"text/xml"</span></div><div class="line">&#125;);</div><div class="line">oMyForm.append(<span class="string">"blob"</span>, oBlob);</div><div class="line"></div><div class="line"><span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest();</div><div class="line">xhr.upload.onprogress = <span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (event.lengthComputable) &#123;</div><div class="line">        <span class="keyword">var</span> completedPercent = event.loaded / event.total;</div><div class="line">        <span class="built_in">console</span>.log(completedPercent);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">xhr.open(<span class="string">"POST"</span>, <span class="string">"/upload"</span>);</div><div class="line">xhr.send(oMyForm);</div></pre></td></tr></table></figure></p>
-<p>服务端代码<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (req.url == <span class="string">'/upload'</span> &amp;&amp; req.method.toLowerCase() == <span class="string">'post'</span>) &#123;</div><div class="line">    req.on(<span class="string">'data'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">buffer</span>) </span>&#123;</div><div class="line">        <span class="comment">//会不时的触发data事件来接受客户端传递的数据</span></div><div class="line">    &#125;)</div><div class="line">    .on(<span class="string">'end'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="comment">//数据传递完毕</span></div><div class="line">    &#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p><strong>注意</strong>: 客户端的<code>xhr.upload.onprogress</code>表示的是上传进度触发的回调(进度取决于客户端的网络状况),参数<code>event.total</code>针对的是所有file的总大小, 而服务端的<code>req.on(&#39;data&#39;, function(){})</code>只是这次请求的数据流接受一定量的数据后触发的回调,两者之间没有直接关系</p>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
-<li><a href="https://segmentfault.com/a/1190000004322487" target="_blank" rel="external">你真的会使用XMLHttpRequest吗？</a></li>
-<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/XMLHttpRequest" target="_blank" rel="external">MDN XMLHttpRequest</a></li>
-<li><a href="https://www.html5rocks.com/zh/tutorials/file/xhr2/" target="_blank" rel="external">XMLHttpRequest2 新技巧</a></li>
-</ul>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/blog/tags/javascript/">javascript</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
+   	       
+	</article>
 	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/blog/2017/05/07/关于XMLHttpRequest/"  title="关于XMLHttpRequest">
+ <strong>下一篇：</strong><br/> 
+ <span>关于XMLHttpRequest
+</span>
+</a>
 </div>
 
-</footer>
+</nav>
 
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/blog/2017/05/06/hello-world/" title="Hello World" itemprop="url">Hello World</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/blog/about" title="lihao" target="_blank" itemprop="author">lihao</a>
-		
-  <p class="article-time">
-    <time datetime="2017-05-06T08:43:45.000Z" itemprop="datePublished"> Published 2017-05-06</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
 	
-</div>
 
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-
-</div>
+</div>  
       <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">Contents</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是web离线应用"><span class="toc-number">1.</span> <span class="toc-text">什么是web离线应用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#比较AppCache和Service-Workers"><span class="toc-number">2.</span> <span class="toc-text">比较AppCache和Service Workers</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#使用方式"><span class="toc-number">2.1.</span> <span class="toc-text">使用方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#兼容性"><span class="toc-number">2.2.</span> <span class="toc-text">兼容性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#W3C标准"><span class="toc-number">2.3.</span> <span class="toc-text">W3C标准</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用Service-Workers的前提条件"><span class="toc-number">3.</span> <span class="toc-text">使用Service Workers的前提条件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何使用"><span class="toc-number">4.</span> <span class="toc-text">如何使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#注册service-worker"><span class="toc-number">4.1.</span> <span class="toc-text">注册service worker</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#关于sw-js"><span class="toc-number">4.2.</span> <span class="toc-text">关于sw.js</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#sw-js的职责"><span class="toc-number">4.2.1.</span> <span class="toc-text">sw.js的职责</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#具体实现"><span class="toc-number">4.2.2.</span> <span class="toc-text">具体实现</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#改进后的代码"><span class="toc-number">4.2.3.</span> <span class="toc-text">改进后的代码</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考资料"><span class="toc-number">5.</span> <span class="toc-text">参考资料</span></a></li></ol>
+ 
+  </div>
 
 <div id="asidepart">
 <div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
@@ -548,12 +329,89 @@ $(document).ready(function(){
       m.removeClass('moveMain');
       a.css('display', 'block').removeClass('fadeOut');
       o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
         
     }
   });
 });
 </script>
 
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
 
 
 
@@ -614,4 +472,4 @@ $(document).ready(function(){
 <!-- Tiny_search End -->
 
   </body>
- </html>
+</html>
